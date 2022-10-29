@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 public class Act04B_NW2E_Vigayan {
 
-    private static void findLocationDelete(Integer[]arr, int element, int position){
+    private static void AddElement(Integer[]arr, int element, int position){
         List<Integer> list = new ArrayList<>(Arrays.asList(arr));
         list.add(position -1, element);
         arr = list.toArray(arr);
@@ -13,7 +13,8 @@ public class Act04B_NW2E_Vigayan {
         System.out.print(element + " inserted at position " + position + ";\n" + Arrays.toString(arr));
 }
 public static void main(String[] args) {
-     Integer[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+     int element;
+     Integer[] arr = {10, 20, 30, 40, 50, 60, 70, 80};
      Scanner scan = new Scanner (System.in);
      
      System.out.println("These are the Options: ");
@@ -21,8 +22,7 @@ public static void main(String[] args) {
      
      System.out.print("Enter your desired operation here: ");
      int op = scan.nextInt();
-     
-     int element, value, arrayLength;
+
      switch(op){
         case 1:
             System.out.print("Enter element to be inserted here: ");
@@ -31,16 +31,16 @@ public static void main(String[] args) {
             System.out.print("Enter position here: ");
             int position = scan.nextInt();
             
-            findLocationDelete(arr, element, position);
+            AddElement(arr, element, position);
             break;
         
         case 2:
             System.out.print("Enter index of element to be deleted here: ");
             element = scan.nextInt();
-
-           int[] newArr = new int[arr.length-1];
-           
-           for(int i=0, n=0; i<arr.length;i++){
+            
+            int[] newArr = new int[arr.length-1];
+            
+            for(int i=0, n=0; i<arr.length;i++){
             if(i!=element){
                 newArr[n]=arr[i];
                 n++;
@@ -51,7 +51,7 @@ public static void main(String[] args) {
             break;
         
         case 3:
-            System.out.println("This will traverse the array" + "\n");
+            System.out.println("This will traverse the array");
             System.out.println("Contents of the array: ");
                 for (int i=0; i<arr.length; i++) {
             System.out.print(arr[i] + " ");
