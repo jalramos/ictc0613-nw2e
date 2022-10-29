@@ -46,8 +46,8 @@ public static void main(String[] args) {
                 n++;
             }
         }
-        System.out.println("Before deletion :" + Arrays.toString(arr));
-        System.out.println("Before deletion :" + Arrays.toString(newArr));
+        System.out.println("Before deletion " + Arrays.toString(arr));
+        System.out.println("After deletion " + Arrays.toString(newArr));
             break;
         
         case 3:
